@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.MainActivity"
+    android:layout_margin="@dimen/dimen_16dp">
+
+    <TextView
+        android:textSize="@dimen/dimen_14sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/head" />
+
+    <EditText
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:textSize="@dimen/dimen_16sp"
+        android:importantForAutofill="no"
+        android:imeOptions="actionNext"/>
+
+        <TextView
+        android:textStyle="bold"
+        android:textSize="@dimen/dimen_14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/neck" />
+
+    <EditText
+        android:id="@+id/neck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:textSize="@dimen/dimen_16sp"
+        android:importantForAutofill="no"
+        android:imeOptions="actionNext"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="@dimen/dimen_14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chest" />
+
+    <EditText
+        android:id="@+id/chest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:textSize="@dimen/dimen_16sp"
+        android:importantForAutofill="no"
+        android:imeOptions="actionNext"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="@dimen/dimen_14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/abdomen" />
+
+    <EditText
+        android:id="@+id/abdomen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:textSize="@dimen/dimen_16sp"
+        android:importantForAutofill="no"
+        android:imeOptions="actionNext"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="@dimen/dimen_14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pelvis" />
+
+    <EditText
+        android:id="@+id/pelvis"
+        android:textSize="@dimen/dimen_16sp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:importantForAutofill="no"
+        android:imeOptions="actionDone"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:layout_marginEnd="@dimen/dimen_16dp" />
+
+    <TextView
+        android:id="@+id/total_Dose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:padding="@dimen/dimen_16dp"
+        android:text="@string/total_dose" />
+
+    <Button
+        android:id="@+id/sum_dose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sum" />
+
+    <Button
+        android:id="@+id/clean_dose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/clean" />
+
+</LinearLayout>

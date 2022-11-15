@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">X-ray CT Total Dose</string>
+    <string name="head">Голова</string>
+    <string name="neck">Шея</string>
+    <string name="chest">Органы грудной клетки</string>
+    <string name="abdomen">Органы брюшной полости</string>
+    <string name="pelvis">Органы малого таза</string>
+    <string name="writing_dose">Введите значения полученных доз, mGu*cm</string>
+    <string name="total_dose">Итоговая доза, мЗв</string>
+    <string name="sum">Рассчитать</string>
+    <string name="clean">Удалить значения</string>
+    <string name="measureDose">mGu*cm</string>
+    <string name="setting_coefficient">Коэффициент</string>
+    <string name="mSv">мЗв</string>
+
+    <string-array name="adult_or_child">
+        <item>Взрослый</item>
+        <item>15 лет</item>
+        <item>10 лет</item>
+        <item>5 лет</item>
+        <item>1 год</item>
+        <item>0 лет</item>
+    </string-array>
+
+</resources>
