@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">X-ray CT Total Dose</string>
+    <string name="app_name">Radiation dose calculator CT</string>
+    <string name="headNeck">Head and Neck</string>
     <string name="head">Head</string>
     <string name="neck">Neck</string>
     <string name="chest">Chest</string>
-    <string name="abdomen">Abdomen</string>
-    <string name="pelvis">Pelvis</string>
+    <string name="abdomenPelvis">Abdomen and Pelvis</string>
+    <string name="trunk">Trunk</string>
     <string name="clean">Delete values</string>
     <string name="sum">Calculate</string>
-    <string name="total_dose">Total dose</string>
+    <string name="total_dose">Total dose,  mSv</string>
     <string name="measureDose">mGu*cm</string>
     <string name="writing_dose">Enter new doses received, nGu*cm</string>
 
     <string-array name="adult_or_child">
-        <item>Adults</item>
-        <item>15 years old</item>
-        <item>10 years old</item>
-        <item>5 years old</item>
-        <item>1 years old</item>
-        <item>0 years old</item>
+        <item>Adult</item>
+        <item>10 year old</item>
+        <item>5 year old</item>
+        <item>1 year old</item>
+        <item>0 year old</item>
     </string-array>
     <string name="setting_coefficient">Coefficient</string>
     <string name="mSv">" mSv"</string>

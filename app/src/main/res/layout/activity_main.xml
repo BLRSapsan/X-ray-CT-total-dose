@@ -13,6 +13,25 @@
         android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/headNeck" />
+
+    <EditText
+        android:id="@+id/headNeck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:digits="0123456789+"
+        android:minHeight="48dp"
+        android:textSize="@dimen/dimen_16sp"
+        android:importantForAutofill="no"
+        android:imeOptions="actionNext"/>
+
+    <TextView
+        android:textSize="@dimen/dimen_14sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/head" />
 
     <EditText
@@ -70,7 +89,7 @@
         android:textSize="@dimen/dimen_14sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/abdomen" />
+        android:text="@string/abdomenPelvis" />
 
     <EditText
         android:id="@+id/abdomen"
@@ -89,7 +108,7 @@
         android:textSize="@dimen/dimen_14sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pelvis" />
+        android:text="@string/trunk" />
 
     <EditText
         android:id="@+id/pelvis"
