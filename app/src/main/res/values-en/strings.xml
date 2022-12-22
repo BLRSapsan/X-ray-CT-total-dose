@@ -23,4 +23,13 @@
     <string name="setting_coefficient">Coefficient</string>
     <string name="mSv">" mSv"</string>
 
+    <string name="table_dose">Normalised effective dose per dose–length product (DLP) for adults (standard physique) and paediatric patients of various ages for various body regions. (Bongartz, et al. 2004, Shrimpton et al. 2006).  \n \n
+        0 year old: head and neck 0.013, head 0.011, neck 0.017, chest 0.039, abdomen and pelvis 0.049, trunk 0.044 \n \n
+        1 year old: head and neck 0.0085, head 0.0067, neck 0.012, chest 0.026, abdomen and pelvis 0.030, trunk 0.028  \n \n
+        5 year old: head and neck 0.0057, head 0.0040, neck 0.011, chest 0.018, abdomen and pelvis 0.020, trunk 0.019 \n \n
+        10 year old: head and neck 0.0042, head 0.0032, neck 0.0079, chest 0.013, abdomen and pelvis 0.015, trunk 0.014 \n \n
+        Adult: head and neck 0.0031, head 0.0021, neck 0.0059, chest 0.014, abdomen and pelvis 0.015, trunk 0.015</string>
+
+    <string name="info">Information</string>
+
 </resources>

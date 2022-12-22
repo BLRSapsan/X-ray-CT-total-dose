@@ -1,8 +1,11 @@
 package com.dose_calculator.x_ray_total_dose.presentation
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
@@ -92,5 +95,21 @@ class MainActivity: AppCompatActivity() {
                 vm.clear()
             }
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.info_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.info_menu_icon -> {
+                val intentInfo = Intent(this, InfoDose::class.java)
+                startActivity(intentInfo)
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
