@@ -1,4 +1,4 @@
-package com.dose_calculator.x_ray_total_dose.domain.useCase.GetAndClearUseCase
+package com.dose_calculator.x_ray_total_dose.domain.useCase.SaveDelete
 
 import com.dose_calculator.x_ray_total_dose.domain.models.GetAndClearDomainModels.SaveModelDomain
 import com.dose_calculator.x_ray_total_dose.domain.models.GetAndClearDomainModels.GetResultModelDomain

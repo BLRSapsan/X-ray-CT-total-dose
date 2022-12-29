@@ -8,9 +8,9 @@ val appModule = module {
     viewModel<MainViewModel> {
         MainViewModel(
             calculateUseCase = get(),
-            clearUseCase = get(),
-            stringToDoubleUseCase = get(),
-            coefficientYearsUseCase = get()
+            coefficientUseCase = get(),
+            deleteUseCase = get(),
+            saveUseCase = get()
         )
     }
 }

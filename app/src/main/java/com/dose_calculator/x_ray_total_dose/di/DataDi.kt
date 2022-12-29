@@ -16,7 +16,7 @@ val dataModule = module {
         DoseShPrStorageImpl(context = get())
     }
     single<SaveDeleteInterface> {
-        SaveDeleteImpl(doseStorage = get())
+        SaveDeleteImpl(doseShPrStorageInterface = get())
     }
 
     factory<AgeCalculateInterface> {

@@ -1,4 +1,4 @@
-package com.dose_calculator.x_ray_total_dose.domain.useCase.ChangeAndCoeffUseCase
+package com.dose_calculator.x_ray_total_dose.domain.useCase.CoefficientCalculate
 
 import com.dose_calculator.x_ray_total_dose.domain.models.ChangeAndCoeffDomainModels.CoefficientModelDomain
 import com.dose_calculator.x_ray_total_dose.domain.models.ChangeAndCoeffDomainModels.EditTextModelDomain

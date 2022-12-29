@@ -9,10 +9,10 @@ import com.dose_calculator.x_ray_total_dose.domain.models.ChangeAndCoeffDomainMo
 import com.dose_calculator.x_ray_total_dose.domain.models.ChangeAndCoeffDomainModels.StringModelDomain
 import com.dose_calculator.x_ray_total_dose.domain.models.GetAndClearDomainModels.SaveModelDomain
 import com.dose_calculator.x_ray_total_dose.domain.models.GetAndClearDomainModels.GetResultModelDomain
-import com.dose_calculator.x_ray_total_dose.domain.useCase.ChangeAndCoeffUseCase.CoefficientUseCase
-import com.dose_calculator.x_ray_total_dose.domain.useCase.ChangeAndCoeffUseCase.CalculateUseCase
-import com.dose_calculator.x_ray_total_dose.domain.useCase.GetAndClearUseCase.SaveUseCase
-import com.dose_calculator.x_ray_total_dose.domain.useCase.GetAndClearUseCase.DeleteUseCase
+import com.dose_calculator.x_ray_total_dose.domain.useCase.CoefficientCalculate.CoefficientUseCase
+import com.dose_calculator.x_ray_total_dose.domain.useCase.CoefficientCalculate.CalculateUseCase
+import com.dose_calculator.x_ray_total_dose.domain.useCase.SaveDelete.SaveUseCase
+import com.dose_calculator.x_ray_total_dose.domain.useCase.SaveDelete.DeleteUseCase
 
 class MainViewModel(private val saveUseCase: SaveUseCase,
                     private val deleteUseCase: DeleteUseCase,
