@@ -1,3 +1,0 @@
-package com.dose_calculator.x_ray_total_dose.data.models.ChangeAndCoeffStorageModels
-
-class CoefficientAgeGroupModelStorage (var coefficient:Byte)

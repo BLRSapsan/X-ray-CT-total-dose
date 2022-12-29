@@ -1,4 +1,4 @@
-package com.dose_calculator.x_ray_total_dose.data.repository.repositoryCoefficient
+package com.dose_calculator.x_ray_total_dose.data.repository.CoefficientCalculateRepStorage
 
 import android.widget.EditText
 

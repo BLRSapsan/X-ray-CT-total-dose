@@ -1,9 +1,9 @@
-package com.dose_calculator.x_ray_total_dose.data.sh
+package com.dose_calculator.x_ray_total_dose.data.SharedPref
 
 import android.content.Context
 import com.dose_calculator.x_ray_total_dose.R
-import com.dose_calculator.x_ray_total_dose.data.models.GetAndClearStorageModels.SaveDoseModelStorage
-import com.dose_calculator.x_ray_total_dose.data.models.GetAndClearStorageModels.GetDoseModelStorage
+import com.dose_calculator.x_ray_total_dose.data.models.SaveDeleteStorageModels.SaveDoseModelStorage
+import com.dose_calculator.x_ray_total_dose.data.models.SaveDeleteStorageModels.GetDoseModelStorage
 
 private const val SHARED_PREFS_NAME = "shared_prefs_name"
 private const val KEY_TOTAL_DOSE = "calculate_dose"

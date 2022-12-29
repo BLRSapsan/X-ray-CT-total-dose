@@ -1,9 +1,9 @@
-package com.dose_calculator.x_ray_total_dose.data.repository.repositoryGetAndClear
+package com.dose_calculator.x_ray_total_dose.data.repository.SaveDeleteRepStorage
 
-import com.dose_calculator.x_ray_total_dose.data.sh.DoseShPrStorageInterface
-import com.dose_calculator.x_ray_total_dose.data.models.GetAndClearStorageModels.SaveDoseModelStorage
-import com.dose_calculator.x_ray_total_dose.domain.models.GetAndClearDomainModels.SaveModelDomain
-import com.dose_calculator.x_ray_total_dose.domain.models.GetAndClearDomainModels.GetResultModelDomain
+import com.dose_calculator.x_ray_total_dose.data.SharedPref.DoseShPrStorageInterface
+import com.dose_calculator.x_ray_total_dose.data.models.SaveDeleteStorageModels.SaveDoseModelStorage
+import com.dose_calculator.x_ray_total_dose.domain.models.SaveDeleteDomainModels.SaveModelDomain
+import com.dose_calculator.x_ray_total_dose.domain.models.SaveDeleteDomainModels.GetResultModelDomain
 import com.dose_calculator.x_ray_total_dose.domain.repository.SaveDeleteInterface
 
 class SaveDeleteImpl (private val doseShPrStorageInterface: DoseShPrStorageInterface):SaveDeleteInterface {
