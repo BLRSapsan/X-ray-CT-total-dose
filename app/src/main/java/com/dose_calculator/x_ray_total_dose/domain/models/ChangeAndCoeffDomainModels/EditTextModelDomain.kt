@@ -2,4 +2,4 @@ package com.dose_calculator.x_ray_total_dose.domain.models.ChangeAndCoeffDomainM
 
 import android.widget.EditText
 
-class EditTextStringArrayModelDomain (var arrayString:ArrayList<EditText>)
+class EditTextModelDomain (var editTexts:ArrayList<EditText>)

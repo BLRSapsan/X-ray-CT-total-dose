@@ -1,0 +1,11 @@
+package com.dose_calculator.x_ray_total_dose.data.coefficient
+
+import com.dose_calculator.x_ray_total_dose.data.models.ChangeAndCoeffStorageModels.CoefficientModelStorage
+import com.dose_calculator.x_ray_total_dose.data.models.ChangeAndCoeffStorageModels.CoefficientDoubleListModelStorage
+import com.dose_calculator.x_ray_total_dose.data.models.ChangeAndCoeffStorageModels.EditTextModelStorage
+import com.dose_calculator.x_ray_total_dose.data.models.ChangeAndCoeffStorageModels.StringModelStorage
+
+interface CoefficientCalculateInterface {
+    fun coefficientAge(coefficientArrayListModelStorage: CoefficientDoubleListModelStorage): CoefficientModelStorage
+    fun calculate(editTextModelStorage: EditTextModelStorage, coefficient:CoefficientModelStorage): StringModelStorage
+}

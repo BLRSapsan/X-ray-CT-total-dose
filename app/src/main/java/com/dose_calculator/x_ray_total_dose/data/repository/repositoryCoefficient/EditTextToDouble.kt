@@ -2,14 +2,14 @@ package com.dose_calculator.x_ray_total_dose.data.repository.repositoryCoefficie
 
 import android.widget.EditText
 
-class EditTextToDoubleTrans {
+class EditTextToDouble {
 
     private val zero = "0"
-    private val mass = ArrayList<Double>()
+    private val listDouble = ArrayList<Double>()
 
-    fun modify(e: ArrayList<EditText>): ArrayList<Double> {
+    fun modify(editTexts: ArrayList<EditText>): ArrayList<Double> {
 
-        for (i in e) {
+        for (i in editTexts) {
             var sum = 0.0
             val primaryString = i.text.toString()
             val secondString: String = if (primaryString == "") zero else primaryString
@@ -19,8 +19,8 @@ class EditTextToDoubleTrans {
                     sum += n.toDouble()
                 }
             }
-            mass.add(sum)
+            listDouble.add(sum)
         }
-        return mass
+        return listDouble
     }
 }

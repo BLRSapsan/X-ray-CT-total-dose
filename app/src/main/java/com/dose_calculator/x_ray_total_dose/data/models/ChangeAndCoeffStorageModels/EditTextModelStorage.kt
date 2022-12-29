@@ -2,4 +2,4 @@ package com.dose_calculator.x_ray_total_dose.data.models.ChangeAndCoeffStorageMo
 
 import android.widget.EditText
 
-class EditArrayModelStorage(var editArray:ArrayList<EditText>)
+class EditTextModelStorage(var editTexts:ArrayList<EditText>)

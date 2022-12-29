@@ -60,14 +60,14 @@ class MainActivity: AppCompatActivity() {
 
         binding.spinner.onItemSelectedListener = coefficient
 
-        //подписка на изменение данных. Как только resultLive изменяется, сразу вызывает код totalDose.text
+        //подписка на изменение данных.
         viewModel.openResultValue.observe(this) {
             binding.effectiveDose.text = it
         }
 
         binding.calculateDose.setOnClickListener {
             it.hideKeyboard()
-            viewModel.calculate(array = arrayEditText, coefficientAge = ageGroup)
+            viewModel.calculate(array = arrayEditText, coefficient = ageGroup)
         }
 
         binding.deleteDose.setOnClickListener {
@@ -87,7 +87,7 @@ class MainActivity: AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.info_menu_icon -> {
-                val intentInfo = Intent(this, InfoDose::class.java)
+                val intentInfo = Intent(this, Information::class.java)
                 startActivity(intentInfo)
                 return true
             }
