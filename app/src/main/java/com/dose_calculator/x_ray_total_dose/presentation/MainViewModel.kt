@@ -23,7 +23,7 @@ class MainViewModel(private val calculateUseCase: CalculateUseCase,
     private var resultLive = MutableLiveData<String>()
     var openResultValue: LiveData<String> = resultLive
 
-    fun sum(array: ArrayList<EditText>, coefficientAge: Byte) {
+    fun calculate(array: ArrayList<EditText>, coefficientAge: Byte) {
 
         //Обработка коэффициента
         val coefficientDose = CoefficientModelDomain(coefficientAge = coefficientAge)
@@ -39,7 +39,7 @@ class MainViewModel(private val calculateUseCase: CalculateUseCase,
         resultLive.value = result.executeString
     }
 
-    fun clear() {
+    fun deleteValues() {
         val result: GetDoseModelDomain = clearUseCase.execute()
         resultLive.value = result.executeString
     }

@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Radiation dose calculator CT</string>
-    <string name="headNeck">Head and Neck</string>
+    <string name="app_name">CT Effective Dose Calculator</string>
+    <string name="head_neck">Head and neck</string>
     <string name="head">Head</string>
     <string name="neck">Neck</string>
     <string name="chest">Chest</string>
-    <string name="abdomenPelvis">Abdomen and Pelvis</string>
-    <string name="trunk">Trunk</string>
-    <string name="clean">Delete values</string>
-    <string name="sum">Calculate</string>
-    <string name="total_dose">Total dose,  mSv</string>
-    <string name="measureDose">mGu*cm</string>
+    <string name="abdomen_pelvis">Abdomen or Pelvis</string>
+    <string name="trunk">Chest, abdomen and pelvis</string>
+    <string name="delete_values">Delete values</string>
+    <string name="calculate">Calculate</string>
+    <string name="effective_dose">Effective dose,  mSv</string>
+    <string name="measure_dose">mGu*cm</string>
     <string name="writing_dose">Enter new doses received, nGu*cm</string>
+    <string name="coefficient">Coefficient</string>
+    <string name="mSv">"mSv"</string>
+    <string name="information_header">Information</string>
 
     <string-array name="adult_or_child">
-        <item>Adult</item>
-        <item>10 year old</item>
-        <item>5 year old</item>
-        <item>1 year old</item>
-        <item>0 year old</item>
+        <item>>15 year old</item>
+        <item>>10–15 year old</item>
+        <item>>5–10 year old</item>
+        <item>>1–5 year old</item>
+        <item>0–1 year old</item>
     </string-array>
-    <string name="setting_coefficient">Coefficient</string>
-    <string name="mSv">" mSv"</string>
 
-    <string name="table_dose">Normalised effective dose per dose–length product (DLP) for adults (standard physique) and paediatric patients of various ages for various body regions. (Bongartz, et al. 2004, Shrimpton et al. 2006).  \n \n
-        0 year old: head and neck 0.013, head 0.011, neck 0.017, chest 0.039, abdomen and pelvis 0.049, trunk 0.044 \n \n
-        1 year old: head and neck 0.0085, head 0.0067, neck 0.012, chest 0.026, abdomen and pelvis 0.030, trunk 0.028  \n \n
-        5 year old: head and neck 0.0057, head 0.0040, neck 0.011, chest 0.018, abdomen and pelvis 0.020, trunk 0.019 \n \n
-        10 year old: head and neck 0.0042, head 0.0032, neck 0.0079, chest 0.013, abdomen and pelvis 0.015, trunk 0.014 \n \n
-        Adult: head and neck 0.0031, head 0.0021, neck 0.0059, chest 0.014, abdomen and pelvis 0.015, trunk 0.015</string>
-
-    <string name="info">Information</string>
+    <string name="text_information">Effective irradiation dose is calculated by multiplying the total DLP ( dose multiplied by length - the weighted radiation dose for the entire CT study) by a conversion factor depending on the type of CT study and the age of the patient. The conversion coefficients used in the appendix are taken from the publication of the International Commission on Radiation Protection (ICRP Publication 102).\n\n
+        To calculate the effective dose, enter the total value of DLP (mGr* cm) in the line of the relevant anatomical area and select the patient’s age interval. The total DLP is DLP for the entire CT scan, i.e. for all scan series. For example, if a CT scan of the abdominal cavity was performed before and after intravenous administration of a contrast agent, then it is necessary to take the total DLP value from the dosimetric report of the scanner and insert it into the calculator line "Abdominal cavity". If several anatomical areas have been scanned (for example, neck and chest) with different technical parameters, then it is necessary to enter the DLP value for each area in the corresponding calculator line.\n\n
+        Important note: the effective dose calculated using a calculator is not an individual radiation dose of a particular patient. In accordance with international guidelines and practice, the effective dose is calculated for a group of patients of average body weight, one age interval, for specific technical parameters of CT scanning. Thus, DLP and the effective radiation dose calculated from it characterize the technical parameters of CT scanning to a greater extent and should be used to optimize radiation doses (technical parameters of scanning). The second purpose of the effective dose is to compare it with the radiation dose from other CT scanners or other types of X-ray and radioisotope studies.\n\n
+        The following conversion factors are used in the program:\n\n
+        0–1 year old: head and neck 0.013; head 0.011; neck 0.017; chest 0.039; abdomen or pelvis 0.049; chest, abdomen and pelvis 0.044\n\n
+        >1–5 year old: head and neck 0.0085; head 0.0067; neck 0.012; chest 0.026; abdomen or pelvis 0.030; chest, abdomen and pelvis 0.028\n\n
+        >5–10 year old: head and neck 0.0057; head 0.0040; neck 0.011; chest 0.018; abdomen or pelvis 0.020; chest, abdomen and pelvis 0.019\n\n
+        >10–15 year old: head and neck 0.0042; head 0.0032; neck 0.0079; chest 0.013; abdomen or pelvis 0.015; chest, abdomen and pelvis 0.014\n\n
+        >15 year old: head and neck 0.0031; head 0.0021; neck 0.0059; chest 0.014; abdomen or pelvis 0.015; chest, abdomen and pelvis 0.015\n\n
+        The developer is grateful for the advice on CT radiation doses to the radiologist, Ph.D., associate professor S. Kharuzhyk (Minsk).
+    </string>
 
 </resources>

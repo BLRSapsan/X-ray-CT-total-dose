@@ -12,7 +12,7 @@ class InfoDose: AppCompatActivity() {
         setContentView(R.layout.info_dose)
 
         val textInfoTable = findViewById<TextView>(R.id.infoText)
-        val tableS:String = resources.getString(R.string.table_dose)
+        val tableS:String = resources.getString(R.string.text_information)
         textInfoTable.text = tableS
 
     }

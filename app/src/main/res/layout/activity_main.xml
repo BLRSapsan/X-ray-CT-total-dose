@@ -9,116 +9,52 @@
     android:layout_margin="@dimen/dimen_16dp">
 
     <TextView
-        android:textSize="@dimen/dimen_14sp"
-        android:textStyle="bold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/headNeck" />
+        style="@style/text_view_style"
+        android:text="@string/head_neck" />
 
     <EditText
         android:id="@+id/headNeck"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="phone"
-        android:digits="0123456789+"
-        android:minHeight="48dp"
-        android:textSize="@dimen/dimen_16sp"
-        android:importantForAutofill="no"
-        android:imeOptions="actionNext"/>
+        style="@style/edit_text_style" />
 
     <TextView
-        android:textSize="@dimen/dimen_14sp"
-        android:textStyle="bold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/text_view_style"
         android:text="@string/head" />
 
     <EditText
         android:id="@+id/head"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="phone"
-        android:digits="0123456789+"
-        android:minHeight="48dp"
-        android:textSize="@dimen/dimen_16sp"
-        android:importantForAutofill="no"
-        android:imeOptions="actionNext"/>
+        style="@style/edit_text_style"/>
 
         <TextView
-        android:textStyle="bold"
-        android:textSize="@dimen/dimen_14sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/neck" />
+            style="@style/text_view_style"
+            android:text="@string/neck" />
 
     <EditText
         android:id="@+id/neck"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="phone"
-        android:digits="0123456789+"
-        android:minHeight="48dp"
-        android:textSize="@dimen/dimen_16sp"
-        android:importantForAutofill="no"
-        android:imeOptions="actionNext"/>
+        style="@style/edit_text_style"/>
 
     <TextView
-        android:textStyle="bold"
-        android:textSize="@dimen/dimen_14sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/text_view_style"
         android:text="@string/chest" />
 
     <EditText
         android:id="@+id/chest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="phone"
-        android:digits="0123456789+"
-        android:minHeight="48dp"
-        android:textSize="@dimen/dimen_16sp"
-        android:importantForAutofill="no"
-        android:imeOptions="actionNext"/>
+        style="@style/edit_text_style"/>
 
     <TextView
-        android:textStyle="bold"
-        android:textSize="@dimen/dimen_14sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/abdomenPelvis" />
+        style="@style/text_view_style"
+        android:text="@string/abdomen_pelvis" />
 
     <EditText
         android:id="@+id/abdomenPelvis"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="phone"
-        android:digits="0123456789+"
-        android:minHeight="48dp"
-        android:textSize="@dimen/dimen_16sp"
-        android:importantForAutofill="no"
-        android:imeOptions="actionNext"/>
+        style="@style/edit_text_style"/>
 
     <TextView
-        android:textStyle="bold"
-        android:textSize="@dimen/dimen_14sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/text_view_style"
         android:text="@string/trunk" />
 
     <EditText
         android:id="@+id/trunk"
-        android:textSize="@dimen/dimen_16sp"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="phone"
-        android:digits="0123456789+"
-        android:importantForAutofill="no"
+        style="@style/edit_text_style"
         android:imeOptions="actionDone"/>
 
     <Spinner
@@ -129,23 +65,21 @@
         android:layout_marginEnd="@dimen/dimen_16dp" />
 
     <TextView
-        android:id="@+id/total_Dose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
+        android:id="@+id/effective_dose"
+        style="@style/text_view_style"
         android:padding="@dimen/dimen_16dp"
-        android:text="@string/total_dose" />
+        android:text="@string/effective_dose" />
 
     <Button
-        android:id="@+id/sum_dose"
+        android:id="@+id/calculate_dose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sum" />
+        android:text="@string/calculate" />
 
     <Button
-        android:id="@+id/clean_dose"
+        android:id="@+id/delete_dose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/clean" />
+        android:text="@string/delete_values" />
 
 </LinearLayout>

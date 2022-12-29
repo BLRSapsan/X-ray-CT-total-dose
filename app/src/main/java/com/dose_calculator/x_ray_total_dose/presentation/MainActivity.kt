@@ -1,51 +1,53 @@
 package com.dose_calculator.x_ray_total_dose.presentation
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.ArrayAdapter
-import android.widget.Button
 import android.widget.EditText
-import android.widget.Spinner
-import android.widget.TextView
 import com.dose_calculator.x_ray_total_dose.R
+import com.dose_calculator.x_ray_total_dose.databinding.ActivityMainBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity: AppCompatActivity() {
 
-    private val vm by viewModel<MainViewModel>()
+    private val viewModel by viewModel<MainViewModel>()
+    private var ageGroup: Byte = 1
+    private lateinit var binding: ActivityMainBinding
 
-    private var selectedItemAge: Byte = 1
+    private var coefficient = object : OnItemSelectedListener {
+        override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+            when (p2) {
+                0 -> ageGroup = 0
+                1 -> ageGroup = 1
+                2 -> ageGroup = 2
+                3 -> ageGroup = 3
+                4 -> ageGroup = 4
+            }
+        }
+
+        override fun onNothingSelected(p0: AdapterView<*>?) {
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val headNeck = findViewById<EditText>(R.id.headNeck)
-        val head = findViewById<EditText>(R.id.head)
-        val neck = findViewById<EditText>(R.id.neck)
-        val chest = findViewById<EditText>(R.id.chest)
-        val abdomenPelvis = findViewById<EditText>(R.id.abdomenPelvis)
-        val trunk = findViewById<EditText>(R.id.trunk)
-        val spinner = findViewById<Spinner>(R.id.spinner)
-        val totalDose = findViewById<TextView>(R.id.total_Dose)
-        val calculateDoseButton = findViewById<Button>(R.id.sum_dose)
-        val cleanDoseButton = findViewById<Button>(R.id.clean_dose)
-
-        val arrayEditText: ArrayList<EditText> = ArrayList()
-        arrayEditText.add(0, headNeck)
-        arrayEditText.add(1, head)
-        arrayEditText.add(2, neck)
-        arrayEditText.add(3, chest)
-        arrayEditText.add(4, abdomenPelvis)
-        arrayEditText.add(5, trunk)
+        val arrayEditText: ArrayList<EditText> = ArrayList<EditText>().apply {
+            add(0, binding.headNeck)
+            add(1, binding.head)
+            add(2, binding.neck)
+            add(3, binding.chest)
+            add(4, binding.abdomenPelvis)
+            add(5, binding.trunk)
+        }
 
         ArrayAdapter.createFromResource(
             this,
@@ -53,46 +55,26 @@ class MainActivity: AppCompatActivity() {
             android.R.layout.simple_spinner_item
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice)
-            spinner.adapter = adapter
+            binding.spinner.adapter = adapter
         }
 
-        spinner.onItemSelectedListener = object : OnItemSelectedListener {
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                when (p2) {
-                    0 -> selectedItemAge = 0
-                    1 -> selectedItemAge = 1
-                    2 -> selectedItemAge = 2
-                    3 -> selectedItemAge = 3
-                    4 -> selectedItemAge = 4
-                }
-            }
-
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-                TODO("Not yet implemented")
-            }
-        }
+        binding.spinner.onItemSelectedListener = coefficient
 
         //подписка на изменение данных. Как только resultLive изменяется, сразу вызывает код totalDose.text
-        vm.openResultValue.observe(this) {
-            totalDose.text = it
+        viewModel.openResultValue.observe(this) {
+            binding.effectiveDose.text = it
         }
 
-        //для скрытия клавиатуры при нажатии на кнопку calculateDoseButton
-        fun View.hideKeyboard() {
-            val inputManager =
-                context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            inputManager.hideSoftInputFromWindow(windowToken, 0)
-        }
-
-        calculateDoseButton.setOnClickListener {
+        binding.calculateDose.setOnClickListener {
             it.hideKeyboard()
-            vm.sum(array = arrayEditText, coefficientAge = selectedItemAge)
+            viewModel.calculate(array = arrayEditText, coefficientAge = ageGroup)
         }
 
-        cleanDoseButton.setOnClickListener {
+        binding.deleteDose.setOnClickListener {
+            it.hideKeyboard()
             for (clearEditText in arrayEditText) {
                 clearEditText.text.clear()
-                vm.clear()
+                viewModel.deleteValues()
             }
         }
     }

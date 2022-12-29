@@ -31,7 +31,7 @@
             android:name=".presentation.InfoDose"
             android:screenOrientation="portrait"
             android:parentActivityName=".presentation.MainActivity"
-            android:label="@string/info">
+            android:label="@string/information_header">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".presentation.MainActivity" />
