@@ -1,7 +1,7 @@
 package com.dose_calculator.x_ray_total_dose.data.Calculate
 
 import com.dose_calculator.x_ray_total_dose.data.models.CoefficientCalculateStorageModels.CoefficientModelStorage
-import com.dose_calculator.x_ray_total_dose.data.models.CoefficientCalculateStorageModels.CoefficientDoubleListModelStorage
+import com.dose_calculator.x_ray_total_dose.data.models.CoefficientCalculateStorageModels.CoefficientListModelStorage
 import com.dose_calculator.x_ray_total_dose.data.models.CoefficientCalculateStorageModels.EditTextModelStorage
 import com.dose_calculator.x_ray_total_dose.data.models.CoefficientCalculateStorageModels.StringModelStorage
 import com.dose_calculator.x_ray_total_dose.data.repository.CoefficientCalculateRepStorage.EditTextToDouble
@@ -9,8 +9,8 @@ import java.text.DecimalFormat
 
 class CoefficientCalculateImpl:CoefficientCalculateInterface {
 
-    override fun coefficientAge(coefficientArrayListModelStorage: CoefficientDoubleListModelStorage): CoefficientModelStorage {
-        return CoefficientModelStorage(coefficientDouble = coefficientArrayListModelStorage.coefficientDoubleList)
+    override fun coefficientAge(coefficientListModelStorage: CoefficientListModelStorage): CoefficientModelStorage {
+        return CoefficientModelStorage(coefficientDouble = coefficientListModelStorage.coefficientDoubleList)
     }
 
     override fun calculate(

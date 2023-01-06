@@ -1,3 +1,3 @@
 package com.dose_calculator.x_ray_total_dose.data.models.CoefficientCalculateStorageModels
 
-class CoefficientDoubleListModelStorage (var coefficientDoubleList:ArrayList<Double>)
+class CoefficientListModelStorage (var coefficientDoubleList:ArrayList<Double>)
