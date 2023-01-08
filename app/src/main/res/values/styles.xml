@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <style name="text_view_style">
+        <item name="android:textSize">@dimen/dimen_14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="edit_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:digits">0123456789+</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">@dimen/dimen_16sp</item>
+        <item name="android:importantForAutofill">no</item>
+        <item name="android:imeOptions">actionNext</item>
+    </style>
+
+</resources>
