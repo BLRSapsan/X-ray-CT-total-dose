@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.dose_calculator.x_ray_total_dose'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.dose_calculator.x_ray_total_dose"
-        minSdk 27
-        targetSdk 32
+        minSdk 22
+        targetSdk 33
         versionCode 3
         versionName "3.0"
 
