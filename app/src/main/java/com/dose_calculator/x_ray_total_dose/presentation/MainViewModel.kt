@@ -27,20 +27,20 @@ class MainViewModel(private val saveUseCase: SaveUseCase,
 
         //Обработка коэффициента
         val coefficientAgeGroup = CoefficientAgeGroupModelDomain(coefficient = coefficient)
-        val returnListCoefficient:CoefficientModelDomain = coefficientUseCase.execute(coefficientAgeGroup = coefficientAgeGroup)
+        val returnListCoefficient:CoefficientModelDomain = coefficientUseCase(coefficientAgeGroup = coefficientAgeGroup)
 
         //обработка EditText, получить обратно string
         val editText = EditTextModelDomain(editTexts = array)
-        val resultString: StringModelDomain = calculateUseCase.execute(edit = editText, coefficient = returnListCoefficient)
+        val resultString: StringModelDomain = calculateUseCase(edit = editText, coefficient = returnListCoefficient)
 
         //сохранить результат и вывести его на экран
         val saveModelDomain = SaveModelDomain(saveResult = resultString.sum)
-        val result: GetResultModelDomain = saveUseCase.execute(saveResult = saveModelDomain)
+        val result: GetResultModelDomain = saveUseCase(saveResult = saveModelDomain)
         resultLive.value = result.getResultSave
     }
 
     fun deleteValues() {
-        val result: GetResultModelDomain = deleteUseCase.execute()
+        val result: GetResultModelDomain = deleteUseCase()
         resultLive.value = result.getResultSave
     }
 }

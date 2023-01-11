@@ -5,7 +5,7 @@ import com.dose_calculator.x_ray_total_dose.domain.models.CoefficientCalculateDo
 import com.dose_calculator.x_ray_total_dose.domain.repository.AgeCalculateInterface
 
 class CoefficientUseCase (private val ageCalculateInterface: AgeCalculateInterface) {
-    fun execute(coefficientAgeGroup: CoefficientAgeGroupModelDomain):CoefficientModelDomain {
+    operator fun invoke (coefficientAgeGroup: CoefficientAgeGroupModelDomain):CoefficientModelDomain {
         return ageCalculateInterface.coefficient(coefficient = coefficientAgeGroup)
     }
 }

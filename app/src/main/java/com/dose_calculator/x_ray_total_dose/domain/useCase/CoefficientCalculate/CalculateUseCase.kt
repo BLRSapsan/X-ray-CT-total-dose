@@ -6,7 +6,7 @@ import com.dose_calculator.x_ray_total_dose.domain.models.CoefficientCalculateDo
 import com.dose_calculator.x_ray_total_dose.domain.repository.AgeCalculateInterface
 
 class CalculateUseCase(private var ageCalculateInterface: AgeCalculateInterface) {
-    fun execute(edit: EditTextModelDomain, coefficient: CoefficientModelDomain): StringModelDomain {
+    operator fun invoke (edit: EditTextModelDomain, coefficient: CoefficientModelDomain): StringModelDomain {
         return ageCalculateInterface.calculate(edit=edit, coefficient = coefficient)
     }
 }
