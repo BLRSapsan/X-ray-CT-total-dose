@@ -5,4 +5,7 @@ data class BodyCoefficient(var headNeck: Double,
                        var neck : Double,
                        var chest : Double,
                        var abdomenPelvis: Double,
-                       var trunk: Double)
+                       var trunk: Double,
+                       var coxae: Double,
+                       var knee: Double,
+                       var crus: Double)

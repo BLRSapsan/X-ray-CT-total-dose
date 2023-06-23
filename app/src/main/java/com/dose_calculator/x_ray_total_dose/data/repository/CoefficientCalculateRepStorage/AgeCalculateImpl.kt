@@ -25,7 +25,10 @@ class AgeCalculateImpl(private val coefficientCalculateInterface: CoefficientCal
                 neck = 1.0,
                 chest = 1.0,
                 abdomenPelvis = 1.0,
-                trunk = 1.0
+                trunk = 1.0,
+                coxae = 1.0,
+                knee = 1.0,
+                crus = 1.0
             ),
 
             1 to BodyCoefficient(
@@ -34,7 +37,10 @@ class AgeCalculateImpl(private val coefficientCalculateInterface: CoefficientCal
                 neck = 1.338983,
                 chest = 0.9285714,
                 abdomenPelvis = 1.0,
-                trunk = 0.9333333
+                trunk = 0.9333333,
+                coxae = 1.25,
+                knee = 1.5,
+                crus = 1.1818181818
             ),
             2 to BodyCoefficient(
                 headNeck = 1.8387,
@@ -42,7 +48,10 @@ class AgeCalculateImpl(private val coefficientCalculateInterface: CoefficientCal
                 neck = 1.864406,
                 chest = 1.2857142,
                 abdomenPelvis = 1.333333,
-                trunk = 1.2666666
+                trunk = 1.2666666,
+                coxae = 2.0,
+                knee = 1.5,
+                crus = 2.0
             ),
             3 to BodyCoefficient(
                 headNeck = 2.741935,
@@ -50,7 +59,10 @@ class AgeCalculateImpl(private val coefficientCalculateInterface: CoefficientCal
                 neck = 2.033898,
                 chest = 1.8571428,
                 abdomenPelvis = 2.0,
-                trunk = 1.86666666
+                trunk = 1.86666666,
+                coxae = 3.0,
+                knee = 2.0,
+                crus = 2.5454545454
             ),
             4 to BodyCoefficient(
                 headNeck = 4.1935483,
@@ -58,7 +70,10 @@ class AgeCalculateImpl(private val coefficientCalculateInterface: CoefficientCal
                 neck = 2.8813559,
                 chest = 2.7857142,
                 abdomenPelvis = 3.2666666,
-                trunk = 2.9333333
+                trunk = 2.9333333,
+                coxae = 5.5,
+                knee = 4.5,
+                crus = 3.72727272
             )
         )
 
@@ -71,6 +86,9 @@ class AgeCalculateImpl(private val coefficientCalculateInterface: CoefficientCal
             add(getBodyCoefficient.chest)
             add(getBodyCoefficient.abdomenPelvis)
             add(getBodyCoefficient.trunk)
+            add(getBodyCoefficient.coxae)
+            add(getBodyCoefficient.knee)
+            add(getBodyCoefficient.crus)
         }
 
         val coefficientListModelStorage = //закидываю созданный список с параметрами в модель папки storage

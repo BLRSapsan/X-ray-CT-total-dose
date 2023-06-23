@@ -47,6 +47,9 @@ class MainActivity: AppCompatActivity() {
             add(3, binding.chest)
             add(4, binding.abdomenPelvis)
             add(5, binding.trunk)
+            add(6, binding.coxae)
+            add(7, binding.knee)
+            add(8, binding.crus)
         }
 
         ArrayAdapter.createFromResource(

@@ -24,6 +24,9 @@ class CoefficientCalculateImpl:CoefficientCalculateInterface {
         val coChest = coefficient.coefficientDouble[3]
         val coAbdomenPelvis = coefficient.coefficientDouble[4]
         val coTrunk = coefficient.coefficientDouble[5]
+        val coCoxae = coefficient.coefficientDouble[6]
+        val coKnee = coefficient.coefficientDouble[7]
+        val coCrus = coefficient.coefficientDouble[8]
 
         val editTextToDouble = EditTextToDouble()
         val massiveDouble = editTextToDouble.modify(editTexts = editTextModelStorage.editTexts)
@@ -33,7 +36,10 @@ class CoefficientCalculateImpl:CoefficientCalculateInterface {
         val chest: Double = massiveDouble[3] * 0.014 * coChest
         val abdomenPelvis: Double = massiveDouble[4] * 0.015 * coAbdomenPelvis
         val trunk: Double = massiveDouble[5] * 0.015 * coTrunk
-        val sumDoseDouble = headNeck + head + neck + chest + abdomenPelvis + trunk
+        val coxae: Double = massiveDouble[6] * 0.0004 * coCoxae
+        val knee: Double = massiveDouble[7] * 0.0002 * coKnee
+        val crus: Double = massiveDouble[8] * 0.011 * coCrus
+        val sumDoseDouble = headNeck + head + neck + chest + abdomenPelvis + trunk + coxae + knee + crus
         val format = DecimalFormat("#.###").format(sumDoseDouble)
         val sumDoseSting = format.toString()
         return StringModelStorage(sumDoseSting)

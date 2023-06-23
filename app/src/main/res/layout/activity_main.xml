@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".presentation.MainActivity"
     android:padding="@dimen/dimen_16dp">
@@ -14,7 +19,7 @@
 
     <EditText
         android:id="@+id/headNeck"
-        style="@style/edit_text_style" />
+        style="@style/edit_text_style"/>
 
     <TextView
         style="@style/text_view_style"
@@ -54,6 +59,30 @@
 
     <EditText
         android:id="@+id/trunk"
+        style="@style/edit_text_style" />
+
+    <TextView
+        style="@style/text_view_style"
+        android:text="@string/coxae"/>
+
+    <EditText
+        android:id="@+id/coxae"
+        style="@style/edit_text_style"/>
+
+    <TextView
+        style="@style/text_view_style"
+        android:text="@string/knee"/>
+
+    <EditText
+        android:id="@+id/knee"
+        style="@style/edit_text_style"/>
+
+    <TextView
+        style="@style/text_view_style"
+        android:text="@string/crus"/>
+
+    <EditText
+        android:id="@+id/crus"
         style="@style/edit_text_style"
         android:imeOptions="actionDone"/>
 
@@ -83,3 +112,5 @@
         android:text="@string/delete_values" />
 
 </LinearLayout>
+
+</ScrollView>
