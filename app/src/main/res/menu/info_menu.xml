@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:title="@string/theme_change"
+        android:id="@+id/theme"
+        android:icon="@drawable/baseline_palette_24"
+        app:showAsAction="ifRoom"/>
+
+    <item
         android:title="@string/information_header"
         android:id="@+id/info_menu_icon"
         android:icon="@drawable/ic_info_24"

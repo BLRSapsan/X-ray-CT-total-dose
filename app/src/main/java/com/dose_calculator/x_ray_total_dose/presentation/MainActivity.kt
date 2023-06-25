@@ -1,6 +1,8 @@
 package com.dose_calculator.x_ray_total_dose.presentation
 
+import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -10,12 +12,20 @@ import android.widget.AdapterView
 import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.ArrayAdapter
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatDelegate
 import com.dose_calculator.x_ray_total_dose.R
 import com.dose_calculator.x_ray_total_dose.databinding.ActivityMainBinding
+import com.dose_calculator.x_ray_total_dose.theme.KEY_THEME
+import com.dose_calculator.x_ray_total_dose.theme.PREFS_NAME
+import com.dose_calculator.x_ray_total_dose.theme.THEME_BATTERY
+import com.dose_calculator.x_ray_total_dose.theme.THEME_DARK
+import com.dose_calculator.x_ray_total_dose.theme.THEME_LIGHT
+import com.dose_calculator.x_ray_total_dose.theme.THEME_SYSTEM
+import com.dose_calculator.x_ray_total_dose.theme.THEME_UNDEFINED
+import com.dose_calculator.x_ray_total_dose.theme.ThemeChange
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity: AppCompatActivity() {
-
     private val viewModel by viewModel<MainViewModel>()
     private var ageGroup: Byte = 1
     private lateinit var binding: ActivityMainBinding
@@ -35,10 +45,14 @@ class MainActivity: AppCompatActivity() {
         }
     }
 
+    private val sharedPrefs by lazy { getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        themeMainActivity()
 
         val arrayEditText: ArrayList<EditText> = ArrayList<EditText>().apply {
             add(0, binding.headNeck)
@@ -89,6 +103,12 @@ class MainActivity: AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.theme -> {
+                val intentTheme = Intent(this, ThemeChange::class.java)
+                startActivity(intentTheme)
+                return true
+            }
+
             R.id.info_menu_icon -> {
                 val intentInfo = Intent(this, Information::class.java)
                 startActivity(intentInfo)
@@ -96,5 +116,34 @@ class MainActivity: AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun themeMainActivity() {
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.getDefaultNightMode())
+
+        val getTheme = sharedPrefs.getInt(KEY_THEME, THEME_UNDEFINED)
+
+        when (getTheme) {
+            THEME_LIGHT -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            THEME_DARK -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            THEME_SYSTEM -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
+            THEME_BATTERY -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+            THEME_UNDEFINED ->
+                when (resources.configuration.uiMode.and(Configuration.UI_MODE_NIGHT_MASK)) {
+                    Configuration.UI_MODE_NIGHT_NO -> AppCompatDelegate.setDefaultNightMode(
+                        AppCompatDelegate.MODE_NIGHT_NO
+                    )
+
+                    Configuration.UI_MODE_NIGHT_YES -> AppCompatDelegate.setDefaultNightMode(
+                        AppCompatDelegate.MODE_NIGHT_YES
+                    )
+
+                    Configuration.UI_MODE_NIGHT_UNDEFINED -> AppCompatDelegate.setDefaultNightMode(
+                        AppCompatDelegate.MODE_NIGHT_NO
+                    )
+                }
+        }
+
     }
 }

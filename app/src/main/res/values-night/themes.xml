@@ -3,7 +3,7 @@
     <style name="Theme.XrayTotalDose" parent="Theme.Material3.DayNight">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#006A60</item>
-        <item name="colorPrimaryVariant">#003C37</item>
+        <item name="colorPrimaryVariant">#006A60</item>
         <item name="colorOnPrimary">#C1C1C1</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

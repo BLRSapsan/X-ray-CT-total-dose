@@ -37,6 +37,16 @@
                 android:value=".presentation.MainActivity" />
         </activity>
 
+        <activity
+            android:name=".theme.ThemeChange"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".presentation.MainActivity"
+            android:label="@string/theme_change">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.MainActivity" />
+        </activity>
+
     </application>
 
 </manifest>

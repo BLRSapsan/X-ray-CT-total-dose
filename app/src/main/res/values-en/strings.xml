@@ -20,6 +20,12 @@
     <string name="mSv">"mSv"</string>
     <string name="information_header">Information</string>
 
+    <string name="theme_change">Theme</string>
+    <string name="light_theme">Dark theme</string>
+    <string name="dark_theme">Light theme</string>
+    <string name="system_theme">Use system theme</string>
+    <string name="battery_saver_theme">Battery saver theme</string>
+
     <string-array name="adult_or_child">
         <item>>15 year old</item>
         <item>>10–15 year old</item>

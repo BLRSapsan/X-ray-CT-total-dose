@@ -19,6 +19,12 @@
     <string name="mSv">мЗв</string>
     <string name="information_header">Информация</string>
 
+    <string name="theme_change">Тема</string>
+    <string name="light_theme">Темная тема</string>
+    <string name="dark_theme">Светлая тема</string>
+    <string name="system_theme">Системная тема</string>
+    <string name="battery_saver_theme">Экономия при низком уровне батареи</string>
+
     <string-array name="adult_or_child">
         <item>>15 лет </item>
         <item>>10–15 лет</item>
