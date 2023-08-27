@@ -20,16 +20,6 @@
             style="@style/text_view_style"
             android:text="@string/dark_theme" />
 
-        <RadioButton
-            android:id="@+id/themeBattery"
-            style="@style/text_view_style"
-            android:text="@string/battery_saver_theme" />
-
-        <RadioButton
-            android:id="@+id/themeSystem"
-            style="@style/text_view_style"
-            android:text="@string/system_theme" />
-
     </RadioGroup>
 
 </FrameLayout>

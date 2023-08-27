@@ -40,8 +40,8 @@ class ThemeChange: AppCompatActivity() {
             when (checkedId) {
                 R.id.themeLight -> setTheme(AppCompatDelegate.MODE_NIGHT_NO, THEME_LIGHT)
                 R.id.themeDark -> setTheme(AppCompatDelegate.MODE_NIGHT_YES, THEME_DARK)
-                R.id.themeBattery -> setTheme(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY, THEME_BATTERY)
-                R.id.themeSystem -> setTheme(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM, THEME_SYSTEM)
+               // R.id.themeBattery -> setTheme(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY, THEME_BATTERY)
+               // R.id.themeSystem -> setTheme(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM, THEME_SYSTEM)
             }
         }
     }
@@ -53,22 +53,22 @@ class ThemeChange: AppCompatActivity() {
 
     //Проверка текущей темы системы
     private fun initTheme() {
-        val themeSystem = findViewById<RadioButton>(R.id.themeSystem)
+       // val themeSystem = findViewById<RadioButton>(R.id.themeSystem)
         val themeLight = findViewById<RadioButton>(R.id.themeLight)
         val themeDark = findViewById<RadioButton>(R.id.themeDark)
-        val themeBattery = findViewById<RadioButton>(R.id.themeBattery)
+      //  val themeBattery = findViewById<RadioButton>(R.id.themeBattery)
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            themeSystem.visibility = View.VISIBLE
-        } else {
-            themeSystem.visibility = View.GONE
-        }
+      //  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+      //      themeSystem.visibility = View.VISIBLE
+      //  } else {
+      //      themeSystem.visibility = View.GONE
+      //  }
 
         when (getSavedTheme()) {
             THEME_LIGHT -> themeLight.isChecked = true
             THEME_DARK -> themeDark.isChecked = true
-            THEME_SYSTEM -> themeSystem.isChecked = true
-            THEME_BATTERY -> themeBattery.isChecked = true
+          //  THEME_SYSTEM -> themeSystem.isChecked = true
+          //  THEME_BATTERY -> themeBattery.isChecked = true
             THEME_UNDEFINED -> {   // по умолчанию
                 when (resources.configuration.uiMode.and(Configuration.UI_MODE_NIGHT_MASK)) {
                     Configuration.UI_MODE_NIGHT_NO -> themeLight.isChecked = true

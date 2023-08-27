@@ -38,9 +38,9 @@ class AgeCalculateImpl(private val coefficientCalculateInterface: CoefficientCal
                 chest = 0.9285714,
                 abdomenPelvis = 1.0,
                 trunk = 0.9333333,
-                coxae = 1.25,
-                knee = 1.5,
-                crus = 1.1818181818
+                coxae = 1.1818181818,
+                knee = 1.25,
+                crus = 1.5
             ),
             2 to BodyCoefficient(
                 headNeck = 1.8387,
@@ -50,8 +50,8 @@ class AgeCalculateImpl(private val coefficientCalculateInterface: CoefficientCal
                 abdomenPelvis = 1.333333,
                 trunk = 1.2666666,
                 coxae = 2.0,
-                knee = 1.5,
-                crus = 2.0
+                knee = 2.0,
+                crus = 1.5
             ),
             3 to BodyCoefficient(
                 headNeck = 2.741935,
@@ -60,9 +60,9 @@ class AgeCalculateImpl(private val coefficientCalculateInterface: CoefficientCal
                 chest = 1.8571428,
                 abdomenPelvis = 2.0,
                 trunk = 1.86666666,
-                coxae = 3.0,
-                knee = 2.0,
-                crus = 2.5454545454
+                coxae = 2.5454545454,
+                knee = 3.0,
+                crus = 2.0
             ),
             4 to BodyCoefficient(
                 headNeck = 4.1935483,
@@ -71,9 +71,9 @@ class AgeCalculateImpl(private val coefficientCalculateInterface: CoefficientCal
                 chest = 2.7857142,
                 abdomenPelvis = 3.2666666,
                 trunk = 2.9333333,
-                coxae = 5.5,
-                knee = 4.5,
-                crus = 3.72727272
+                coxae = 3.72727272,
+                knee = 5.5,
+                crus = 4.5
             )
         )
 
