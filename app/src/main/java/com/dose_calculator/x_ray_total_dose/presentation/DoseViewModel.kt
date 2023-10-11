@@ -14,7 +14,7 @@ import com.dose_calculator.x_ray_total_dose.domain.useCase.CoefficientCalculate.
 import com.dose_calculator.x_ray_total_dose.domain.useCase.SaveDelete.SaveUseCase
 import com.dose_calculator.x_ray_total_dose.domain.useCase.SaveDelete.DeleteUseCase
 
-class MainViewModel(private val saveUseCase: SaveUseCase,
+class DoseViewModel(private val saveUseCase: SaveUseCase,
                     private val deleteUseCase: DeleteUseCase,
                     private val calculateUseCase: CalculateUseCase,
                     private val coefficientUseCase: CoefficientUseCase): androidx.lifecycle.ViewModel() {
@@ -24,7 +24,6 @@ class MainViewModel(private val saveUseCase: SaveUseCase,
     var openResultValue: LiveData<String> = resultLive
 
     fun calculate(array: ArrayList<EditText>, coefficient: Byte) {
-
         //Обработка коэффициента
         val coefficientAgeGroup = CoefficientAgeGroupModelDomain(coefficient = coefficient)
         val returnListCoefficient:CoefficientModelDomain = coefficientUseCase(coefficientAgeGroup = coefficientAgeGroup)

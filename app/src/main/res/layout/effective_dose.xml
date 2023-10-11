@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".presentation.MainActivity"
+        android:padding="@dimen/dimen_16dp">
+
+        <TextView
+            style="@style/text_view_style"
+            android:text="@string/head_neck" />
+
+        <EditText
+            android:id="@+id/headNeck"
+            style="@style/dose_edit_text_style"/>
+
+        <TextView
+            style="@style/text_view_style"
+            android:text="@string/head" />
+
+        <EditText
+            android:id="@+id/head"
+            style="@style/dose_edit_text_style"/>
+
+        <TextView
+            style="@style/text_view_style"
+            android:text="@string/neck" />
+
+        <EditText
+            android:id="@+id/neck"
+            style="@style/dose_edit_text_style"/>
+
+        <TextView
+            style="@style/text_view_style"
+            android:text="@string/chest" />
+
+        <EditText
+            android:id="@+id/chest"
+            style="@style/dose_edit_text_style"/>
+
+        <TextView
+            style="@style/text_view_style"
+            android:text="@string/abdomen_pelvis" />
+
+        <EditText
+            android:id="@+id/abdomenPelvis"
+            style="@style/dose_edit_text_style"/>
+
+        <TextView
+            style="@style/text_view_style"
+            android:text="@string/trunk" />
+
+        <EditText
+            android:id="@+id/trunk"
+            style="@style/dose_edit_text_style" />
+
+        <TextView
+            style="@style/text_view_style"
+            android:text="@string/coxae"/>
+
+        <EditText
+            android:id="@+id/coxae"
+            style="@style/dose_edit_text_style"/>
+
+        <TextView
+            style="@style/text_view_style"
+            android:text="@string/knee"/>
+
+        <EditText
+            android:id="@+id/knee"
+            style="@style/dose_edit_text_style"/>
+
+        <TextView
+            style="@style/text_view_style"
+            android:text="@string/crus"/>
+
+        <EditText
+            android:id="@+id/crus"
+            style="@style/dose_edit_text_style"
+            android:imeOptions="actionDone"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp" />
+
+        <TextView
+            android:id="@+id/effective_dose"
+            style="@style/text_view_style"
+            android:padding="@dimen/dimen_16dp"
+            android:text="@string/effective_dose" />
+
+        <Button
+            android:id="@+id/calculate_dose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate" />
+
+        <Button
+            android:id="@+id/delete_dose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_values" />
+
+    </LinearLayout>
+
+</ScrollView>

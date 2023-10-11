@@ -8,6 +8,8 @@ import com.dose_calculator.x_ray_total_dose.data.repository.SaveDeleteRepStorage
 import com.dose_calculator.x_ray_total_dose.data.SharedPref.DoseShPrStorageImpl
 import com.dose_calculator.x_ray_total_dose.domain.repository.SaveDeleteInterface
 import com.dose_calculator.x_ray_total_dose.domain.repository.AgeCalculateInterface
+import com.dose_calculator.x_ray_total_dose.skf.data_skf.SKFCalculate
+import com.dose_calculator.x_ray_total_dose.skf.domainSKF.repository_skf.SKFCalculateInterface
 import org.koin.dsl.module
 
 
@@ -24,5 +26,10 @@ val dataModule = module {
     }
     factory<CoefficientCalculateInterface> {
         CoefficientCalculateImpl()
+    }
+
+    //skf
+    factory <SKFCalculateInterface> {
+        SKFCalculate(context = get())
     }
 }

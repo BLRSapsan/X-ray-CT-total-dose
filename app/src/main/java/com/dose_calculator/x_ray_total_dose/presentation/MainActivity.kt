@@ -7,93 +7,35 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.AdapterView
-import android.widget.AdapterView.OnItemSelectedListener
-import android.widget.ArrayAdapter
-import android.widget.EditText
 import androidx.appcompat.app.AppCompatDelegate
 import com.dose_calculator.x_ray_total_dose.R
 import com.dose_calculator.x_ray_total_dose.databinding.ActivityMainBinding
 import com.dose_calculator.x_ray_total_dose.theme.KEY_THEME
 import com.dose_calculator.x_ray_total_dose.theme.PREFS_NAME
-import com.dose_calculator.x_ray_total_dose.theme.THEME_BATTERY
 import com.dose_calculator.x_ray_total_dose.theme.THEME_DARK
 import com.dose_calculator.x_ray_total_dose.theme.THEME_LIGHT
-import com.dose_calculator.x_ray_total_dose.theme.THEME_SYSTEM
 import com.dose_calculator.x_ray_total_dose.theme.THEME_UNDEFINED
 import com.dose_calculator.x_ray_total_dose.theme.ThemeChange
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity: AppCompatActivity() {
-    private val viewModel by viewModel<MainViewModel>()
-    private var ageGroup: Byte = 1
-    private lateinit var binding: ActivityMainBinding
-
-    private var coefficient = object : OnItemSelectedListener {
-        override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-            when (p2) {
-                0 -> ageGroup = 0
-                1 -> ageGroup = 1
-                2 -> ageGroup = 2
-                3 -> ageGroup = 3
-                4 -> ageGroup = 4
-            }
-        }
-
-        override fun onNothingSelected(p0: AdapterView<*>?) {
-        }
-    }
-
     private val sharedPrefs by lazy { getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE) }
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        themeMainActivity()
-
-        val arrayEditText: ArrayList<EditText> = ArrayList<EditText>().apply {
-            add(0, binding.headNeck)
-            add(1, binding.head)
-            add(2, binding.neck)
-            add(3, binding.chest)
-            add(4, binding.abdomenPelvis)
-            add(5, binding.trunk)
-            add(6, binding.coxae)
-            add(7, binding.knee)
-            add(8, binding.crus)
-        }
-
-        ArrayAdapter.createFromResource(
-            this,
-            R.array.adult_or_child,
-            android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice)
-            binding.spinner.adapter = adapter
-        }
-
-        binding.spinner.onItemSelectedListener = coefficient
-
-        //подписка на изменение данных.
-        viewModel.openResultValue.observe(this) {
-            binding.effectiveDose.text = it
-        }
-
-        binding.calculateDose.setOnClickListener {
-            it.hideKeyboard()
-            viewModel.calculate(array = arrayEditText, coefficient = ageGroup)
-        }
-
-        binding.deleteDose.setOnClickListener {
-            it.hideKeyboard()
-            for (clearEditText in arrayEditText) {
-                clearEditText.text.clear()
-                viewModel.deleteValues()
+        binding.pager.adapter = ViewPager(this)
+        TabLayoutMediator(binding.tabMode, binding.pager) { tab, position ->
+            when (position) {
+                0 -> tab.setText(R.string.mSv)
+                1 -> tab.setText(R.string.skf)
             }
-        }
+        }.attach()
+
+        themeMainActivity()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -125,8 +67,6 @@ class MainActivity: AppCompatActivity() {
         when (sharedPrefs.getInt(KEY_THEME, THEME_UNDEFINED)) {
             THEME_LIGHT -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             THEME_DARK -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-           // THEME_SYSTEM -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
-            //THEME_BATTERY -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
             THEME_UNDEFINED ->
                 when (resources.configuration.uiMode.and(Configuration.UI_MODE_NIGHT_MASK)) {
                     Configuration.UI_MODE_NIGHT_NO -> AppCompatDelegate.setDefaultNightMode(
@@ -142,6 +82,5 @@ class MainActivity: AppCompatActivity() {
                     )
                 }
         }
-
     }
 }

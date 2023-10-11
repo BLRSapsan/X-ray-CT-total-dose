@@ -8,7 +8,7 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="edit_text_style">
+    <style name="dose_edit_text_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:ems">10</item>
@@ -20,4 +20,33 @@
         <item name="android:imeOptions">actionNext</item>
     </style>
 
+    <style name="view_pager">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+    </style>
+
+    <style name="tabMode">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintEnd_toStartOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <style name="skf_edit_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:digits">0123456789</item>
+        <item name="android:maxLength">3</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">@dimen/dimen_16sp</item>
+        <item name="android:importantForAutofill">no</item>
+        <item name="android:imeOptions">actionNext</item>
+    </style>
 </resources>

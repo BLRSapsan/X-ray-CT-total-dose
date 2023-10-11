@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_16dp">
+
+        <RadioGroup
+            android:id="@+id/radioGroup_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/man"
+                android:text="@string/man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/woman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/woman"/>
+        </RadioGroup>
+
+        <TextView
+            style="@style/text_view_style"
+            android:text="@string/Age" />
+
+        <EditText
+            android:id="@+id/age"
+            style="@style/skf_edit_text_style" />
+
+        <TextView
+            style="@style/text_view_style"
+            android:text="@string/height" />
+
+        <EditText
+            android:id="@+id/height"
+            style="@style/skf_edit_text_style"
+            android:hint="@string/for_a_child"/>
+
+        <TextView
+            style="@style/text_view_style"
+            android:text="@string/creatinine" />
+
+        <EditText
+            android:id="@+id/creatinine"
+            style="@style/skf_edit_text_style"
+            android:imeOptions="actionDone"/>
+
+        <Button
+            android:id="@+id/calculate_skf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate" />
+
+        <Button
+            android:id="@+id/delete_skf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_values" />
+
+        <TextView
+            style="@style/text_view_style"
+            android:id="@+id/value_skf"
+            android:layout_marginTop="@dimen/dimen_16dp" />
+
+    </LinearLayout>
+
+</ScrollView>

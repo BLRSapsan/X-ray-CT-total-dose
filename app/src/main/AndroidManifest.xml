@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name="com.dose_calculator.x_ray_total_dose.di.AppDi"
+        android:name=".di.AppDi"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,12 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.XrayTotalDose"
         tools:targetApi="31">
+
+
         <activity
-            android:name="com.dose_calculator.x_ray_total_dose.presentation.MainActivity"
+            android:name=".presentation.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
@@ -28,8 +29,8 @@
 
         <activity
             android:name=".presentation.Information"
-            android:parentActivityName=".presentation.MainActivity"
-            android:label="@string/information_header">
+            android:label="@string/information_header"
+            android:parentActivityName=".presentation.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".presentation.MainActivity" />
@@ -37,13 +38,12 @@
 
         <activity
             android:name=".theme.ThemeChange"
-            android:parentActivityName=".presentation.MainActivity"
-            android:label="@string/theme_change">
+            android:label="@string/theme_change"
+            android:parentActivityName=".presentation.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".presentation.MainActivity" />
         </activity>
-
     </application>
 
 </manifest>

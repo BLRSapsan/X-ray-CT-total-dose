@@ -26,6 +26,19 @@
     <string name="system_theme">Use system theme</string>
     <string name="battery_saver_theme">Battery saver theme</string>
 
+    <string name="skf">eGFR</string>
+    <string name="man">M</string>
+    <string name="woman">W</string>
+    <string name="creatinine">Creatinine μmol/L</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="Age">Age</string>
+    <string name="for_a_child">For a child</string>
+    <string name="write_new_values">Enter new values</string>
+    <string name="enter_creatinine">Enter creatinine</string>
+    <string name="enter_height">Enter height</string>
+    <string name="enter_age">Enter age</string>
+
     <string-array name="adult_or_child">
         <item>>15 year old</item>
         <item>>10–15 year old</item>
@@ -43,7 +56,15 @@
         >5–10 лет: head and neck 0.0057; head 0.0040; neck 0.011; chest 0.018; abdomen and/or pelvis 0.020; chest and abdomen, and pelvis 0.019, hip joints and/or thigh 0,022; knee 0,0008; lower leg and/or foot 0,0003.\n\n
         >10–15 лет: head and neck 0.0042; head 0.0032; neck 0.0079; chest 0.013; abdomen and/or pelvis 0.015; chest and abdomen, and pelvis 0.014, hip joints and/or thigh 0,013; knee 0,0005; lower leg and/or foot 0,0003.\n\n
         >15 лет: head and neck 0.0031; head 0.0021; neck 0.0059; chest 0.014; abdomen and/or pelvis 0.015; chest and abdomen, and pelvis 0.015, hip joints and/or thigh 0,011; knee 0,0004; lower leg and/or foot 0,0002.\n\n
-        The developer is grateful for the advice on CT radiation doses to the radiologist, Ph.D., associate professor S. Kharuzhyk (Minsk).
+        The developer is grateful for the advice on CT radiation doses to the radiologist, Ph.D., associate professor S. Kharuzhyk (Minsk).\n\n
+        \n\n
+        To calculate GFR in people aged 18 years and older, the formula CKD-EPI (ml/min /1.73 m2) is used.\n\n
+        Women – if blood creatinine is lower or equal to 62 μmol/L: GFR=144×(0.993^YEARS)×((CREAT/62)^(-0,329)); \n\n
+        Women – if blood creatinine is higher than 62 μmol/L: GFR=144×(0.993^YEARS)×((CREAT/62)^(-1,209));\n\n
+        Men – if blood creatinine is lower or equal to 80 μmol/l: GFR=144×(0.993^YEARS)×((CREAT/80)^(-0,411));\n\n
+        Men – if blood creatinine is above 80 μmol/l: GFR=144×(0.993^YEARS)×((CREAT/80)^(-1,209)).\n\n
+        To calculate GFR in children, the Schwartz formula is used: \n\n
+        GFR=36.5*HEIGHT/CREAT. \n\n
     </string>
 
 </resources>
