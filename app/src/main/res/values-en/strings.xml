@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">CT Effective Dose Calculator</string>
+    <string name="app_name">Radiologist calculator</string>
     <string name="head_neck">Head and neck</string>
     <string name="head">Head</string>
     <string name="neck">Neck</string>
@@ -51,18 +51,18 @@
         To calculate the effective dose, enter the total value of DLP (mGr* cm) in the line of the relevant anatomical area and select the patient’s age interval. The total DLP is DLP for the entire CT scan, i.e. for all scan series. For example, if a CT scan of the abdominal cavity was performed before and after intravenous administration of a contrast agent, then it is necessary to take the total DLP value from the dosimetric report of the scanner and insert it into the calculator line "Abdominal cavity". If several anatomical areas have been scanned (for example, neck and chest) with different technical parameters, then it is necessary to enter the DLP value for each area in the corresponding calculator line.\n\n
         Important note: the effective dose calculated using a calculator is not an individual radiation dose of a particular patient. In accordance with international guidelines and practice, the effective dose is calculated for a group of patients of average body weight, one age interval, for specific technical parameters of CT scanning. Thus, DLP and the effective radiation dose calculated from it characterize the technical parameters of CT scanning to a greater extent and should be used to optimize radiation doses (technical parameters of scanning). The second purpose of the effective dose is to compare it with the radiation dose from other CT scanners or other types of X-ray and radioisotope studies.\n\n
         The following conversion factors are used in the program:\n\n
-        0-1 лет: head and neck 0.013; head 0.011; neck 0.017; chest 0.039; abdomen and/or pelvis 0.049; chest and abdomen, and pelvis 0.044, hip joints and/or thigh 0,041; knee 0,0022; lower leg and/or foot 0,0009.\n\n
-        >1–5 лет: head and neck 0.0085; head 0.0067; neck 0.012; chest 0.026; abdomen and/or pelvis 0.030; chest and abdomen, and pelvis 0.028, hip joints and/or thigh 0,028; knee 0,0012; lower leg and/or foot 0,0004.\n\n
-        >5–10 лет: head and neck 0.0057; head 0.0040; neck 0.011; chest 0.018; abdomen and/or pelvis 0.020; chest and abdomen, and pelvis 0.019, hip joints and/or thigh 0,022; knee 0,0008; lower leg and/or foot 0,0003.\n\n
-        >10–15 лет: head and neck 0.0042; head 0.0032; neck 0.0079; chest 0.013; abdomen and/or pelvis 0.015; chest and abdomen, and pelvis 0.014, hip joints and/or thigh 0,013; knee 0,0005; lower leg and/or foot 0,0003.\n\n
-        >15 лет: head and neck 0.0031; head 0.0021; neck 0.0059; chest 0.014; abdomen and/or pelvis 0.015; chest and abdomen, and pelvis 0.015, hip joints and/or thigh 0,011; knee 0,0004; lower leg and/or foot 0,0002.\n\n
+        0-1 year old: head and neck 0.013; head 0.011; neck 0.017; chest 0.039; abdomen and/or pelvis 0.049; chest and abdomen, and pelvis 0.044, hip joints and/or thigh 0,041; knee 0,0022; lower leg and/or foot 0,0009.\n\n
+        >1–5 year old: head and neck 0.0085; head 0.0067; neck 0.012; chest 0.026; abdomen and/or pelvis 0.030; chest and abdomen, and pelvis 0.028, hip joints and/or thigh 0,028; knee 0,0012; lower leg and/or foot 0,0004.\n\n
+        >5–10 year old: head and neck 0.0057; head 0.0040; neck 0.011; chest 0.018; abdomen and/or pelvis 0.020; chest and abdomen, and pelvis 0.019, hip joints and/or thigh 0,022; knee 0,0008; lower leg and/or foot 0,0003.\n\n
+        >10–15 year old: head and neck 0.0042; head 0.0032; neck 0.0079; chest 0.013; abdomen and/or pelvis 0.015; chest and abdomen, and pelvis 0.014, hip joints and/or thigh 0,013; knee 0,0005; lower leg and/or foot 0,0003.\n\n
+        >15 year old: head and neck 0.0031; head 0.0021; neck 0.0059; chest 0.014; abdomen and/or pelvis 0.015; chest and abdomen, and pelvis 0.015, hip joints and/or thigh 0,011; knee 0,0004; lower leg and/or foot 0,0002.\n\n
         The developer is grateful for the advice on CT radiation doses to the radiologist, Ph.D., associate professor S. Kharuzhyk (Minsk).\n\n
         \n\n
         To calculate GFR in people aged 18 years and older, the formula CKD-EPI (ml/min /1.73 m2) is used.\n\n
         Women – if blood creatinine is lower or equal to 62 μmol/L: GFR=144×(0.993^YEARS)×((CREAT/62)^(-0,329)); \n\n
         Women – if blood creatinine is higher than 62 μmol/L: GFR=144×(0.993^YEARS)×((CREAT/62)^(-1,209));\n\n
-        Men – if blood creatinine is lower or equal to 80 μmol/l: GFR=144×(0.993^YEARS)×((CREAT/80)^(-0,411));\n\n
-        Men – if blood creatinine is above 80 μmol/l: GFR=144×(0.993^YEARS)×((CREAT/80)^(-1,209)).\n\n
+        Men – if blood creatinine is lower or equal to 80 μmol/l: GFR=141×(0.993^YEARS)×((CREAT/80)^(-0,411));\n\n
+        Men – if blood creatinine is above 80 μmol/l: GFR=141×(0.993^YEARS)×((CREAT/80)^(-1,209)).\n\n
         To calculate GFR in children, the Schwartz formula is used: \n\n
         GFR=36.5*HEIGHT/CREAT. \n\n
     </string>

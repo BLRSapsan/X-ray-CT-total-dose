@@ -11,8 +11,8 @@ android {
         applicationId "com.dose_calculator.x_ray_total_dose"
         minSdk 26
         targetSdk 33
-        versionCode 7
-        versionName "7.0"
+        versionCode 10
+        versionName "9.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.debug

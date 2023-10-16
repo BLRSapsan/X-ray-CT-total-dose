@@ -33,8 +33,8 @@ class SKFCalculate(context:Context): SKFCalculateInterface {
                     } else 141.0 * ((creatinine / 80.0).pow(-1.209)) * (0.993.pow(age))
                 } else if (sexWM == 1) {
                     skf = if (creatinine <= 62) {
-                        141.0 * ((creatinine / 62.0).pow(-0.329)) * (0.993.pow(age))
-                    } else 141.0 * ((creatinine / 62.0).pow(-1.209)) * (0.993.pow(age))
+                        144.0 * ((creatinine / 62.0).pow(-0.329)) * (0.993.pow(age))
+                    } else 144.0 * ((creatinine / 62.0).pow(-1.209)) * (0.993.pow(age))
                 }
             }
 
